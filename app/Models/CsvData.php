@@ -1,0 +1,100 @@
+<?php
+
+namespace App\Models;
+
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
+
+class CsvData extends Model
+{
+    use HasFactory;
+   
+    protected $table = 'csv_data';
+
+
+    protected $fillable = [
+        'TimeInt',
+        'TimeStr',
+        'AmperajeC1',
+        'AmperajeC2',
+        'AmperajeC3',
+        'AmperajeC4',
+        'AmperajeC5',
+        'AmperajeG1',
+        'AmperajeG2',
+        'AmperajeG3',
+        'Babor1',
+        'Babor10',
+        'Babor2',
+        'Babor3',
+        'Babor4',
+        'Babor5',
+        'Babor6',
+        'Babor7',
+        'Babor8',
+        'Babor9',
+        'Consumo_Instantaneo_MP',
+        'Consumo_Total_MP',
+        'Estribor1',
+        'Estribor10',
+        'Estribor2',
+        'Estribor3',
+        'Estribor4',
+        'Estribor5',
+        'Estribor6',
+        'Estribor7',
+        'Estribor8',
+        'Estribor9',
+        'Horas_Total_MP',
+        'PotenciaCP',
+        'PotenciaCT1',
+        'PotenciaCT2',
+        'PotenciaCT3',
+        'PotenciaCT4',
+        'PotenciaConsumida',
+        'PotenciaG1',
+        'PotenciaG2',
+        'PotenciaG3',
+        'PotenciaGEN',
+        'PresionAceiteMP',
+        'PresionAspiracionCP1',
+        'PresionAspiracionCT1',
+        'PresionAspiracionCT2',
+        'PresionAspiracionCT3',
+        'PresionAspiracionCT4',
+        'PresionDescargaCP1',
+        'PresionDescargaCT1',
+        'PresionDescargaCT2',
+        'PresionDescargaCT3',
+        'PresionDescargaCT4',
+        'PresionG1',
+        'PresionG2',
+        'PresionG3',
+        'Presion_Reductora',
+        'RPM_MP',
+        'TemperaturaADescargaCP1',
+        'TemperaturaADescargaCT1',
+        'TemperaturaADescargaCT2',
+        'TemperaturaADescargaCT3',
+        'TemperaturaADescargaCT4',
+        'TemperaturaAceiteCT1',
+        'TemperaturaAceiteCT2',
+        'TemperaturaAceiteCT3',
+        'TemperaturaAceiteCT4',
+        'TemperaturaAceiteMP',
+        'TemperaturaAguaMP',
+        'TemperaturaAspiracionCP1',
+        'TemperaturaAspiracionCT1',
+        'TemperaturaAspiracionCT2',
+        'TemperaturaAspiracionCT3',
+        'TemperaturaAspiracionCT4',
+        'TemperaturaG1',
+        'TemperaturaG2',
+        'TemperaturaG3',
+        'Temperatura_Reductora',
+        'VoltajeG1',
+        'VoltajeG2',
+        'VoltajeG3'
+    ];
+
+}
