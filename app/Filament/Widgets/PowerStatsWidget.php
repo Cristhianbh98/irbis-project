@@ -3,11 +3,14 @@
 namespace App\Filament\Widgets;
 
 use Filament\Widgets\ChartWidget;
+use Filament\Forms\Components\DatePicker;
 use App\Models\CsvData;
 
 class PowerStatsWidget extends ChartWidget
 {
-    protected static ?string $heading = 'Power Stats: Potencia G1, G2 y KW Optimo';
+    protected static ?string $heading = 'Potencia G1, G2 y KW Optimo';
+
+    protected int | string | array $columnSpan = 'full';
 
     protected function getType(): string
     {
@@ -17,9 +20,14 @@ class PowerStatsWidget extends ChartWidget
     protected function getData(): array
     {
 
-        $csvData = CsvData::select('TimeStr', 'PotenciaG1', 'PotenciaG2')->get();
+        $csvData = CsvData::select('TimeInt', 'PotenciaG1', 'PotenciaG2')->get();
 
-        $timeStr = $csvData->pluck('TimeStr')->toArray();
+        $timeStr = $csvData->pluck('TimeInt')->toArray();
+
+        $timeStr = array_map(function($time) {
+            return date('Y-m-d', $time);
+        }, $timeStr);
+
         $kwOptimo = array_fill(0, count($timeStr), 500); 
 
         return [
