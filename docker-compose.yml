@@ -8,10 +8,10 @@ services:
     ports:
       - "3306:3306"
     environment:
-      MARIADB_ROOT_PASSWORD: U4W44MB5Ri
-      MARIADB_DATABASE: database
-      MARIADB_USER: user
-      MARIADB_PASSWORD: RmPB9l5UY8
+      MARIADB_ROOT_PASSWORD: ${DB_ROOT_PASSWORD}
+      MARIADB_DATABASE: ${DB_DATABASE}
+      MARIADB_USER: ${DB_USERNAME}
+      MARIADB_PASSWORD: ${RmPB9l5UY8}
 
   phpmyadmin:
     image: phpmyadmin
